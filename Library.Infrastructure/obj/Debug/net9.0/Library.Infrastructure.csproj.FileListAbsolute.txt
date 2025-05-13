@@ -1,0 +1,17 @@
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\bin\Debug\net9.0\Library.Infrastructure.deps.json
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\bin\Debug\net9.0\Library.Infrastructure.dll
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\bin\Debug\net9.0\Library.Infrastructure.pdb
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library.Infrastructure.AssemblyInfoInputs.cache
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library.Infrastructure.AssemblyInfo.cs
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library.Infrastructure.csproj.CoreCompileInputs.cache
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library.Infrastructure.dll
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\refint\Library.Infrastructure.dll
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library.Infrastructure.pdb
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\ref\Library.Infrastructure.dll
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library.Infrastructure.csproj.AssemblyReference.cache
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\bin\Debug\net9.0\Library.Infrastructure.runtimeconfig.json
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\bin\Debug\net9.0\Library.Core.dll
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\bin\Debug\net9.0\Library.Core.pdb
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library..FAF1E3BF.Up2Date
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library.Infrastructure.genruntimeconfig.cache
