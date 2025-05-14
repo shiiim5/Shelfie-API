@@ -9,3 +9,4 @@ E:\newShimaa\WebAPI\Project\Library\Library.Core\obj\Debug\net9.0\Library.Core.d
 E:\newShimaa\WebAPI\Project\Library\Library.Core\obj\Debug\net9.0\refint\Library.Core.dll
 E:\newShimaa\WebAPI\Project\Library\Library.Core\obj\Debug\net9.0\Library.Core.pdb
 E:\newShimaa\WebAPI\Project\Library\Library.Core\obj\Debug\net9.0\ref\Library.Core.dll
+E:\newShimaa\WebAPI\Project\Library\Library.Core\obj\Debug\net9.0\Library.Core.sourcelink.json

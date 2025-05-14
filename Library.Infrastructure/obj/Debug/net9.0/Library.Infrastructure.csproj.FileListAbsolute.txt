@@ -15,3 +15,4 @@ E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\bin\Debug\net9.0\Libr
 E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\bin\Debug\net9.0\Library.Core.pdb
 E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library..FAF1E3BF.Up2Date
 E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library.Infrastructure.genruntimeconfig.cache
+E:\newShimaa\WebAPI\Project\Library\Library.Infrastructure\obj\Debug\net9.0\Library.Infrastructure.sourcelink.json
