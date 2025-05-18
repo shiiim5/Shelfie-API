@@ -1,4 +1,5 @@
 
+using System.Text.Json.Serialization;
 using Library.Infrastructure;
 
 namespace Library.API
@@ -11,11 +12,15 @@ namespace Library.API
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+           // builder.Services.AddControllers();
+            builder.Services.AddControllers().AddJsonOptions(x =>
+   x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.infrastructureRegisteration(builder.Configuration);
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 
             var app = builder.Build();
 

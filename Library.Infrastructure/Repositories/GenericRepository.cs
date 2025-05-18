@@ -22,6 +22,7 @@ namespace Library.Infrastructure.Repositories
         public async Task AddAsync(T entity)
         {
             await context.Set<T>().AddAsync(entity);
+            await context.SaveChangesAsync();
            
            
         }
@@ -29,7 +30,9 @@ namespace Library.Infrastructure.Repositories
         public async Task DeleteAsync(int id)
         {
            var entity = await context.Set<T>().FindAsync(id);
-            context.Set<T>().Remove(entity);    
+            context.Set<T>().Remove(entity); 
+            await context.SaveChangesAsync();
+
         }
 
         public async Task<IReadOnlyList<T>> GetAllAsync()=>await context.Set<T>().AsNoTracking().ToListAsync();
@@ -68,11 +71,10 @@ namespace Library.Infrastructure.Repositories
         public async Task UpdateAsync(T entity)
         {
           context.Entry(entity).State = EntityState.Modified;
+            await context.SaveChangesAsync();
+
         }
 
-        public async Task Save()
-        {
-            await context.SaveChangesAsync();
-        }
+     
     }
 }

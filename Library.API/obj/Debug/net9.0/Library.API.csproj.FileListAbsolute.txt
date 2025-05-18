@@ -172,3 +172,8 @@ E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\tr\Microsoft.Co
 E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 E:\newShimaa\WebAPI\Project\Library\Library.API\obj\Debug\net9.0\Library.API.sourcelink.json
+E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\AutoMapper.dll
+E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Library.API.staticwebassets.runtime.json

@@ -60,6 +60,43 @@ namespace Library.Infrastructure.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Authors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Bio = "Science fiction legend",
+                            ImgUrl = "/images/authors/asimov.jpg",
+                            Name = "Isaac Asimov"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Bio = "Physicist and cosmologist",
+                            ImgUrl = "/images/authors/hawking.jpg",
+                            Name = "Stephen Hawking"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Bio = "Queen of Mystery",
+                            ImgUrl = "/images/authors/christie.jpg",
+                            Name = "Agatha Christie"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Bio = "Biographer of geniuses",
+                            ImgUrl = "/images/authors/isaacson.jpg",
+                            Name = "Walter Isaacson"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Bio = "Greek philosopher",
+                            ImgUrl = "/images/authors/plato.jpg",
+                            Name = "Plato"
+                        });
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.AuthorOfBook", b =>
@@ -83,6 +120,38 @@ namespace Library.Infrastructure.Data.Migrations
                     b.HasIndex("BookId");
 
                     b.ToTable("AuthorsOfBooks");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AuthorId = 1,
+                            BookId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AuthorId = 2,
+                            BookId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AuthorId = 3,
+                            BookId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AuthorId = 4,
+                            BookId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AuthorId = 5,
+                            BookId = 5
+                        });
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.Book", b =>
@@ -192,6 +261,10 @@ namespace Library.Infrastructure.Data.Migrations
 
                     b.Property<int>("BookId")
                         .HasColumnType("int");
+
+                    b.Property<string>("ImgName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

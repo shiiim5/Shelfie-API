@@ -12,6 +12,8 @@ namespace Library.Core.Entities.Books
         [ForeignKey("Book")]
         public int BookId { get; set; }
 
+        public string ImgName { get; set; }
+
         public virtual Book book { get; set; }
 
     }
