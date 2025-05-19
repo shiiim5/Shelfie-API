@@ -12,5 +12,6 @@ namespace Library.Core.Interfaces
     {
         Task<bool> AddAsync(AddBookDTO bookDTO);
         Task<bool> UpdateAsync(UpdateBookDTO bookDTO);
+        Task DeleteAsync(Book book);
     }
 }

@@ -47,6 +47,8 @@ namespace Library.Infrastructure.Repositories
 
         }
 
+      
+
         public async Task<bool> UpdateAsync(UpdateBookDTO bookDTO)
         {
            if(bookDTO is null)
@@ -74,6 +76,19 @@ namespace Library.Infrastructure.Repositories
             await context.Photos.AddRangeAsync(photo);
             await context.SaveChangesAsync();
             return true;
+        }
+
+
+        public async Task DeleteAsync(Book book)
+        {
+            var photo = await context.Photos.Where(m=>m.BookId == book.Id).ToListAsync();
+            foreach(var item in photo)
+            {
+                imageManagementService.DeleteImgAsync(item.ImgName);
+            }
+            context.Books.Remove(book);
+            await context.SaveChangesAsync();
+           
         }
     }
 }

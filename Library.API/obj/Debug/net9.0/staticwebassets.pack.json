@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.API\\wwwroot\\Imgs\\zzzzzzzzz\\meme5.jpeg",
-      "PackagePath": "staticwebassets\\Imgs\\zzzzzzzzz\\meme5.jpeg"
+      "Id": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.API\\wwwroot\\Imgs\\zzzzzzzzzz\\meme5.jpeg",
+      "PackagePath": "staticwebassets\\Imgs\\zzzzzzzzzz\\meme5.jpeg"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Library.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

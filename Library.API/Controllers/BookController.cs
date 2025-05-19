@@ -96,7 +96,9 @@ namespace Library.API.Controllers
         {
             try
             {
-                await unit.bookRepository.DeleteAsync(id);
+                var book = await unit.bookRepository.GetByIdAsync(id,x=>x.photos,x=>x.category);
+                await unit.bookRepository.DeleteAsync(book);
+
                 return Ok(new ResponseAPI(200, "Item has been deleted"));
 
 

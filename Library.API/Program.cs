@@ -1,5 +1,6 @@
 
 using System.Text.Json.Serialization;
+using Library.API.MiddleWare;
 using Library.Infrastructure;
 
 namespace Library.API
@@ -12,7 +13,8 @@ namespace Library.API
 
             // Add services to the container.
 
-           // builder.Services.AddControllers();
+            // builder.Services.AddControllers();
+            builder.Services.AddMemoryCache();
             builder.Services.AddControllers().AddJsonOptions(x =>
    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -31,6 +33,8 @@ namespace Library.API
                 app.UseSwaggerUI();
               
             }
+            app.UseMiddleware<ExceptionMiddleware>();
+            app.UseStatusCodePagesWithRedirects("/errors/{0}");
             app.UseRouting();
 
             app.UseAuthorization();
