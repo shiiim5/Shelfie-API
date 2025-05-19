@@ -27,6 +27,8 @@ namespace Library.Infrastructure.Repositories
            
         }
 
+  
+
         public async Task DeleteAsync(int id)
         {
            var entity = await context.Set<T>().FindAsync(id);
@@ -75,6 +77,7 @@ namespace Library.Infrastructure.Repositories
 
         }
 
-     
+        public async Task<int> CountAsync()
+            =>await context.Set<T>().CountAsync();
     }
 }

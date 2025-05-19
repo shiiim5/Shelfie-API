@@ -26,7 +26,8 @@ namespace Library.API.MiddleWare
                 if (IsRequestAllowed(context) == false) { 
                 context.Response.StatusCode = (int)HttpStatusCode.TooManyRequests;
                     context.Response.ContentType = "application/json";
-                    var response = new APIException((int)HttpStatusCode.TooManyRequests,"Too Many requests, please try again later.");
+                    var response = 
+                        new APIException((int)HttpStatusCode.TooManyRequests,"Too Many requests, please try again later.");
                     await context.Response.WriteAsJsonAsync(response);
 
                 }

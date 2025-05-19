@@ -3,6 +3,7 @@ using Library.API.Helper;
 using Library.Core.DTOs;
 using Library.Core.Entities.Books;
 using Library.Core.Interfaces;
+using Library.Core.Sharing;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,17 +18,13 @@ namespace Library.API.Controllers
 
 
         [HttpGet("All")]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery]BookParams bookParams)
         {
             try
             {
-                var books = await unit.bookRepository.GetAllAsync(x=>x.category,x=>x.photos);
-                var result = mapper.Map<List<BookDTO>>(books);
-                if (books is null)
-                {
-                    return BadRequest(new ResponseAPI(400));
-                }
-                return Ok(result);
+                var books = await unit.bookRepository.GetAllAsync(bookParams);
+                var totalCount = await unit.bookRepository.CountAsync();
+                return Ok(new Pagination<BookDTO>(bookParams.PageNumber,bookParams.PageSize,totalCount,books));
             }
             catch (Exception ex)
             {

@@ -33,7 +33,9 @@ namespace Library.API
                 app.UseSwaggerUI();
               
             }
-            app.UseMiddleware<ExceptionMiddleware>();
+            if (!app.Environment.IsDevelopment()) {
+                app.UseMiddleware<ExceptionMiddleware>();
+            }
             app.UseStatusCodePagesWithRedirects("/errors/{0}");
             app.UseRouting();
 

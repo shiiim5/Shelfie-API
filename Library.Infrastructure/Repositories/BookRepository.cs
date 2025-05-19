@@ -8,6 +8,7 @@ using Library.Core.DTOs;
 using Library.Core.Entities.Books;
 using Library.Core.Interfaces;
 using Library.Core.Services;
+using Library.Core.Sharing;
 using Library.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -89,6 +90,40 @@ namespace Library.Infrastructure.Repositories
             context.Books.Remove(book);
             await context.SaveChangesAsync();
            
+        }
+
+        public async Task<IEnumerable<BookDTO>> GetAllAsync(BookParams bookParams)
+        {
+            var query = context.Books.Include(m=>m.category).Include(m=>m.photos).AsNoTracking();
+
+            if (!string.IsNullOrEmpty(bookParams.Search)){
+                var searchWords = bookParams.Search.Split(' ');
+                query = query.Where(m => searchWords.All(word =>
+                m.Title.ToLower().Contains(word.ToLower()) ||
+                m.Description.ToLower().Contains(word.ToLower())
+                ));
+
+            }
+
+            if (bookParams.CategoryId.HasValue)
+            {
+                query = query.Where(m=>m.CategoryId == bookParams.CategoryId);
+            }
+            if (!string.IsNullOrEmpty(bookParams.Sort))
+            {
+                query = bookParams.Sort switch
+                {
+                    "Ascending" => query.OrderBy(m => m.Title),
+                    "Descending" => query.OrderByDescending(m => m.Title),
+                    "Available" => query.Where(m => m.AvailableCopies >= 1),
+                    _ => query.OrderBy(m => m.Title),
+                };
+            }
+            bookParams.PageNumber = bookParams.PageNumber > 0 ? bookParams.PageNumber : 1;
+            bookParams.PageSize = bookParams.PageSize > 0 ? bookParams.PageSize : 3;
+            query = query.Skip((bookParams.PageSize) *(bookParams.PageNumber - 1)).Take(bookParams.PageSize);
+            var result = mapper.Map<List<BookDTO>>(query);
+            return result;
         }
     }
 }

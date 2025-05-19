@@ -20,7 +20,7 @@ namespace Library.Core.Interfaces
         Task UpdateAsync(T entity);
         Task DeleteAsync(int id);
 
-       
+       Task<int> CountAsync();
 
     }
 }
