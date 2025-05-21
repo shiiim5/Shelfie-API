@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Library.Core.Entities.Books;
 using Library.Core.Entities.Users;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -30,6 +31,9 @@ namespace Library.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+           
         }
+
+      
     }
 }

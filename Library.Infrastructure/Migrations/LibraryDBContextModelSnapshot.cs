@@ -34,7 +34,7 @@ namespace Library.Infrastructure.Migrations
 
                     b.HasIndex("authorsId");
 
-                    b.ToTable("AuthorBook");
+                    b.ToTable("AuthorBook", (string)null);
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.Author", b =>
@@ -59,7 +59,7 @@ namespace Library.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Authors", (string)null);
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.AuthorOfBook", b =>
@@ -82,7 +82,7 @@ namespace Library.Infrastructure.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("AuthorsOfBooks");
+                    b.ToTable("AuthorsOfBooks", (string)null);
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.Book", b =>
@@ -118,7 +118,7 @@ namespace Library.Infrastructure.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Books");
+                    b.ToTable("Books", (string)null);
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.Borrow", b =>
@@ -156,7 +156,7 @@ namespace Library.Infrastructure.Migrations
 
                     b.HasIndex("userId");
 
-                    b.ToTable("Borrows");
+                    b.ToTable("Borrows", (string)null);
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.Category", b =>
@@ -178,7 +178,7 @@ namespace Library.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.Photo", b =>
@@ -200,7 +200,7 @@ namespace Library.Infrastructure.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("Photos");
+                    b.ToTable("Photos", (string)null);
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Users.ApplicationUser", b =>

@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Library.Infrastructure\Library.Infrastructure.csproj" />
+    <ProjectReference Include="..\Library.User.Management\Library.User.Management.csproj" />
   </ItemGroup>
 
   <ItemGroup>

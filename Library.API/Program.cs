@@ -1,7 +1,13 @@
 
 using System.Text.Json.Serialization;
 using Library.API.MiddleWare;
+using Library.Core.Entities.Users;
 using Library.Infrastructure;
+using Library.Infrastructure.Data;
+using Library.User.Management.Models;
+using Library.User.Management.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 
 namespace Library.API
 {
@@ -10,6 +16,25 @@ namespace Library.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            var configuiration = builder.Configuration;
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<LibraryDBContext>()
+                .AddDefaultTokenProviders();
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            });
+
+            var emailConfig = configuiration
+                .GetSection("EmailConfiguration")
+                .Get<EmailConfiguiration>();
+            builder.Services.AddSingleton(emailConfig);
+            builder.Services.AddScoped<IEmailService,EmailService>();
 
             // Add services to the container.
 

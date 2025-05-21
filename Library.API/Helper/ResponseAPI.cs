@@ -18,6 +18,7 @@
                 200 => "Done",
                 400 => "Bad Request",
                 401 => "Un Authorized",
+                403 => "Forbidden",
                 404=>"Not Found",
                 500 => "Server Error",
                 _=> null,

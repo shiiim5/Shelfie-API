@@ -448,6 +448,37 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Library.API.Controllers.UserController",
+    "Method": "Register",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerUser",
+        "Type": "Library.Core.Models.Authentication.Register.RegisterUser",
+        "IsRequired": true
+      },
+      {
+        "Name": "role",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library.API.Controllers.UserController",
+    "Method": "TestEmail",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Library.API.Controllers.ErrorController",
     "Method": "Error",
     "RelativePath": "errors/{statusCode}",
