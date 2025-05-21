@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Library.Infrastructure.Data.Migrations
+namespace Library.Infrastructure.Migrations
 {
     [DbContext(typeof(LibraryDBContext))]
-    [Migration("20250514150908_seeding")]
-    partial class seeding
+    [Migration("20250521102550_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,43 +63,6 @@ namespace Library.Infrastructure.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Authors");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Bio = "Science fiction legend",
-                            ImgUrl = "/images/authors/asimov.jpg",
-                            Name = "Isaac Asimov"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Bio = "Physicist and cosmologist",
-                            ImgUrl = "/images/authors/hawking.jpg",
-                            Name = "Stephen Hawking"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Bio = "Queen of Mystery",
-                            ImgUrl = "/images/authors/christie.jpg",
-                            Name = "Agatha Christie"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Bio = "Biographer of geniuses",
-                            ImgUrl = "/images/authors/isaacson.jpg",
-                            Name = "Walter Isaacson"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Bio = "Greek philosopher",
-                            ImgUrl = "/images/authors/plato.jpg",
-                            Name = "Plato"
-                        });
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.AuthorOfBook", b =>
@@ -123,38 +86,6 @@ namespace Library.Infrastructure.Data.Migrations
                     b.HasIndex("BookId");
 
                     b.ToTable("AuthorsOfBooks");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AuthorId = 1,
-                            BookId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AuthorId = 2,
-                            BookId = 2
-                        },
-                        new
-                        {
-                            Id = 3,
-                            AuthorId = 3,
-                            BookId = 3
-                        },
-                        new
-                        {
-                            Id = 4,
-                            AuthorId = 4,
-                            BookId = 4
-                        },
-                        new
-                        {
-                            Id = 5,
-                            AuthorId = 5,
-                            BookId = 5
-                        });
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.Book", b =>
@@ -195,63 +126,6 @@ namespace Library.Infrastructure.Data.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Books");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Author = "Isaac Asimov",
-                            AvailableCopies = 5,
-                            CategoryId = 1,
-                            Description = "Sci-fi classic",
-                            ISBN = "1111111111",
-                            Quantity = 8,
-                            Title = "Foundation"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Author = "Stephen Hawking",
-                            AvailableCopies = 2,
-                            CategoryId = 1,
-                            Description = "Cosmology made easy",
-                            ISBN = "2222222222",
-                            Quantity = 5,
-                            Title = "A Brief History of Time"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Author = "Agatha Christie",
-                            AvailableCopies = 6,
-                            CategoryId = 4,
-                            Description = "Detective Hercule Poirot solves a case",
-                            ISBN = "3333333333",
-                            Quantity = 6,
-                            Title = "Murder on the Orient Express"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Author = "Walter Isaacson",
-                            AvailableCopies = 2,
-                            CategoryId = 3,
-                            Description = "Biography of Steve Jobs",
-                            ISBN = "4444444444",
-                            Quantity = 4,
-                            Title = "Steve Jobs"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Author = "Plato",
-                            AvailableCopies = 7,
-                            CategoryId = 5,
-                            Description = "Philosophical dialogue",
-                            ISBN = "5555555555",
-                            Quantity = 7,
-                            Title = "The Republic"
-                        });
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.Borrow", b =>
@@ -280,11 +154,14 @@ namespace Library.Infrastructure.Data.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
+                    b.Property<string>("userId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BookId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("userId");
 
                     b.ToTable("Borrows");
                 });
@@ -303,44 +180,11 @@ namespace Library.Infrastructure.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "Futuristic science & tech",
-                            Name = "Science Fiction"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Books about past events",
-                            Name = "History"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Life stories of people",
-                            Name = "Biography"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "Suspense & detective fiction",
-                            Name = "Mystery"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "Ideas, logic, and life",
-                            Name = "Philosophy"
-                        });
                 });
 
             modelBuilder.Entity("Library.Core.Entities.Books.Photo", b =>
@@ -354,7 +198,7 @@ namespace Library.Infrastructure.Data.Migrations
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ImgURL")
+                    b.Property<string>("ImgName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -365,7 +209,106 @@ namespace Library.Infrastructure.Data.Migrations
                     b.ToTable("Photos");
                 });
 
-            modelBuilder.Entity("Library.Core.Entities.Users.User", b =>
+            modelBuilder.Entity("Library.Core.Entities.Users.ApplicationUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NationalId")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -373,33 +316,102 @@ namespace Library.Infrastructure.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Email")
-                        .IsRequired()
+                    b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
+                    b.Property<string>("ClaimValue")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("RoleId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens", (string)null);
                 });
 
             modelBuilder.Entity("AuthorBook", b =>
@@ -455,11 +467,9 @@ namespace Library.Infrastructure.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Library.Core.Entities.Users.User", "user")
+                    b.HasOne("Library.Core.Entities.Users.ApplicationUser", "user")
                         .WithMany("borrows")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("userId");
 
                     b.Navigation("book");
 
@@ -477,6 +487,57 @@ namespace Library.Infrastructure.Data.Migrations
                     b.Navigation("book");
                 });
 
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("Library.Core.Entities.Users.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("Library.Core.Entities.Users.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Library.Core.Entities.Users.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("Library.Core.Entities.Users.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Library.Core.Entities.Books.Book", b =>
                 {
                     b.Navigation("Borrows");
@@ -489,7 +550,7 @@ namespace Library.Infrastructure.Data.Migrations
                     b.Navigation("Books");
                 });
 
-            modelBuilder.Entity("Library.Core.Entities.Users.User", b =>
+            modelBuilder.Entity("Library.Core.Entities.Users.ApplicationUser", b =>
                 {
                     b.Navigation("borrows");
                 });

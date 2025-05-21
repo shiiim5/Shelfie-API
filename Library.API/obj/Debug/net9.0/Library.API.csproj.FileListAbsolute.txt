@@ -177,3 +177,9 @@ E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.Exten
 E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
 E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
 E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Library.API.staticwebassets.runtime.json
+E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+E:\newShimaa\WebAPI\Project\Library\Library.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

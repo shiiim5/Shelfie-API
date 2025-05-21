@@ -13,8 +13,8 @@ namespace Library.Infrastructure.Data.Config
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.Property(x=>x.Name).IsRequired().HasMaxLength(100);
-            builder.Property(x=>x.Id).IsRequired();
+            builder.Property(x => x.Name).IsRequired().HasMaxLength(100);
+            builder.Property(x => x.Id).IsRequired();
         }
     }
 }

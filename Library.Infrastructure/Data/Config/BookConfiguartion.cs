@@ -13,9 +13,10 @@ namespace Library.Infrastructure.Data.Config
     {
         public void Configure(EntityTypeBuilder<Book> builder)
         {
-            builder.Property(x=>x.Title).IsRequired();
-            builder.Property(x=>x.Description).IsRequired();
-           
+            builder.Property(x => x.Title).IsRequired();
+            builder.Property(x => x.Description).IsRequired();
+          
+
         }
     }
 }

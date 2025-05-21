@@ -11,10 +11,10 @@ namespace Library.Core.Entities.Books
 {
     public class Borrow:BaseEntity<int>
     {
-        [ForeignKey("User")]
+        [ForeignKey("ApplicationUser")]
         public int UserId { get; set; }
 
-        public virtual User user {get; set;}
+        public virtual ApplicationUser user {get; set;}
 
 
         [ForeignKey("Book")]

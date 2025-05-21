@@ -10,7 +10,7 @@ namespace Library.Core.Entities.Books
     public class Book:BaseEntity<int>
     {
         public string Title { get; set; }
-        public string Author { get; set; }
+   
         public string ISBN { get; set; }
         public string Description { get; set; }
 
@@ -22,10 +22,10 @@ namespace Library.Core.Entities.Books
 
        public virtual Category category {  get; set; }
 
-        public virtual List<Photo> photos { get; set; } = new List<Photo>();
+        public virtual List<Photo>? photos { get; set; } = new List<Photo>();
 
-        public virtual List<Author> authors { get; set; } = new List<Author>();
-        public virtual List<Borrow> Borrows { get; set; } = new List<Borrow>();
+        public virtual List<Author>? authors { get; set; } = new List<Author>();
+        public virtual List<Borrow>? Borrows { get; set; } = new List<Borrow>();
 
 
 

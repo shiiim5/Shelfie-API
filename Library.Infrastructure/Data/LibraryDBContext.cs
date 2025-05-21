@@ -6,11 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Library.Core.Entities.Books;
 using Library.Core.Entities.Users;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Library.Infrastructure.Data
 {
-    public class LibraryDBContext:DbContext
+    public class LibraryDBContext:IdentityDbContext<ApplicationUser>
     {
         public LibraryDBContext(DbContextOptions<LibraryDBContext> options):base(options) 
         {
@@ -23,7 +24,7 @@ namespace Library.Infrastructure.Data
         public virtual DbSet<Borrow> Borrows { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Photo> Photos { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+      
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
