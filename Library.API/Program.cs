@@ -19,6 +19,11 @@ namespace Library.API
 
             var configuiration = builder.Configuration;
 
+            //CORS
+            builder.Services.AddCors(op =>
+            op.AddPolicy("CORSPolicy",builder=>
+            builder.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:4200")));
+
             //Identity
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<LibraryDBContext>()
@@ -66,6 +71,8 @@ namespace Library.API
                 app.UseSwaggerUI();
               
             }
+
+            app.UseCors("CORSPolicy");
             if (!app.Environment.IsDevelopment()) {
                 app.UseMiddleware<ExceptionMiddleware>();
             }
