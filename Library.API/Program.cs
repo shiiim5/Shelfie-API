@@ -18,10 +18,13 @@ namespace Library.API
             var builder = WebApplication.CreateBuilder(args);
 
             var configuiration = builder.Configuration;
+
+            //Identity
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<LibraryDBContext>()
                 .AddDefaultTokenProviders();
 
+            //Authentication
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -30,11 +33,16 @@ namespace Library.API
 
             });
 
+            //Email
             var emailConfig = configuiration
                 .GetSection("EmailConfiguration")
                 .Get<EmailConfiguiration>();
             builder.Services.AddSingleton(emailConfig);
             builder.Services.AddScoped<IEmailService,EmailService>();
+
+            builder.Services.Configure<IdentityOptions>(op =>
+            op.SignIn.RequireConfirmedEmail = true
+            );
 
             // Add services to the container.
 

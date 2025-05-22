@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dqAZ+bjUz5Y=",
+  "dgSpecHash": "DChRNKuu4IQ=",
   "success": true,
-  "projectFilePath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj",
+  "projectFilePath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smart\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.5\\microsoft.aspnetcore.authentication.jwtbearer.9.0.5.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\9.0.5\\microsoft.aspnetcore.cryptography.internal.9.0.5.nupkg.sha512",

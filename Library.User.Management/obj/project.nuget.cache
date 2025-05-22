@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aVbQSf5KQqI=",
+  "dgSpecHash": "Z3+BwBy/1Bc=",
   "success": true,
-  "projectFilePath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.User.Management\\Library.User.Management.csproj",
+  "projectFilePath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.User.Management\\Library.User.Management.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smart\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",

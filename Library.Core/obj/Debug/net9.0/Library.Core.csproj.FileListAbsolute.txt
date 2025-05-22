@@ -11,3 +11,16 @@ E:\newShimaa\WebAPI\Project\Library\Library.Core\obj\Debug\net9.0\Library.Core.p
 E:\newShimaa\WebAPI\Project\Library\Library.Core\obj\Debug\net9.0\ref\Library.Core.dll
 E:\newShimaa\WebAPI\Project\Library\Library.Core\obj\Debug\net9.0\Library.Core.sourcelink.json
 E:\newShimaa\WebAPI\Project\Library\Library.Core\obj\Debug\net9.0\Library.Core.csproj.AssemblyReference.cache
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\bin\Debug\net9.0\Library.Core.deps.json
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\bin\Debug\net9.0\Library.Core.dll
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\bin\Debug\net9.0\Library.Core.pdb
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\obj\Debug\net9.0\Library.Core.csproj.AssemblyReference.cache
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\obj\Debug\net9.0\Library.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\obj\Debug\net9.0\Library.Core.AssemblyInfoInputs.cache
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\obj\Debug\net9.0\Library.Core.AssemblyInfo.cs
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\obj\Debug\net9.0\Library.Core.csproj.CoreCompileInputs.cache
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\obj\Debug\net9.0\Library.Core.sourcelink.json
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\obj\Debug\net9.0\Library.Core.dll
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\obj\Debug\net9.0\refint\Library.Core.dll
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\obj\Debug\net9.0\Library.Core.pdb
+E:\newShimaa\WebAPI\Library\Shelfie-API\Library.Core\obj\Debug\net9.0\ref\Library.Core.dll

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "T15xwEyaJoHHkJlqGiBvEb/NgF2i8HIXNYQXz2VfMwQ=",
+  "Hash": "F/PygK6m3+RwWImTno0Hp1Zg1hNzmRngUf3dtFJsOhg=",
   "Source": "Library.API",
   "BasePath": "_content/Library.API",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "Library.API\\wwwroot",
       "Source": "Library.API",
-      "ContentRoot": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.API\\wwwroot\\",
+      "ContentRoot": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.API\\wwwroot\\",
       "BasePath": "_content/Library.API",
       "Pattern": "**"
     }

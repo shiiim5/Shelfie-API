@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj": {}
+    "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj": {}
   },
   "projects": {
-    "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj": {
+    "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj",
+        "projectUniqueName": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj",
         "projectName": "Library.Core",
-        "projectPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj",
+        "projectPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj",
         "packagesPath": "C:\\Users\\smart\\.nuget\\packages\\",
-        "outputPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\obj\\",
+        "outputPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

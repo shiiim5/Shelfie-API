@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5M9QeMnLn8s=",
+  "dgSpecHash": "go5kJHVr720=",
   "success": true,
-  "projectFilePath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj",
+  "projectFilePath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Infrastructure\\Library.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smart\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

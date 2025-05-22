@@ -470,12 +470,39 @@
   },
   {
     "ContainingType": "Library.API.Controllers.UserController",
-    "Method": "TestEmail",
-    "RelativePath": "api/User",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/User/ConfirmEmail",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library.API.Controllers.UserController",
+    "Method": "Login",
+    "RelativePath": "api/User/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginUser",
+        "Type": "Library.Core.Models.Authentication.Login.LoginUser",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

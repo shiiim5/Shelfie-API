@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.API\\Library.API.csproj": {}
+    "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.API\\Library.API.csproj": {}
   },
   "projects": {
-    "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.API\\Library.API.csproj": {
+    "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.API\\Library.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.API\\Library.API.csproj",
+        "projectUniqueName": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.API\\Library.API.csproj",
         "projectName": "Library.API",
-        "projectPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.API\\Library.API.csproj",
+        "projectPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.API\\Library.API.csproj",
         "packagesPath": "C:\\Users\\smart\\.nuget\\packages\\",
-        "outputPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.API\\obj\\",
+        "outputPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj": {
-                "projectPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj"
+              "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Infrastructure\\Library.Infrastructure.csproj": {
+                "projectPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Infrastructure\\Library.Infrastructure.csproj"
               },
-              "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.User.Management\\Library.User.Management.csproj": {
-                "projectPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.User.Management\\Library.User.Management.csproj"
+              "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.User.Management\\Library.User.Management.csproj": {
+                "projectPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.User.Management\\Library.User.Management.csproj"
               }
             }
           }
@@ -99,14 +99,14 @@
         }
       }
     },
-    "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj": {
+    "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj",
+        "projectUniqueName": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj",
         "projectName": "Library.Core",
-        "projectPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj",
+        "projectPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj",
         "packagesPath": "C:\\Users\\smart\\.nuget\\packages\\",
-        "outputPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\obj\\",
+        "outputPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -178,14 +178,14 @@
         }
       }
     },
-    "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj": {
+    "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Infrastructure\\Library.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj",
+        "projectUniqueName": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Infrastructure\\Library.Infrastructure.csproj",
         "projectName": "Library.Infrastructure",
-        "projectPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj",
+        "projectPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Infrastructure\\Library.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\smart\\.nuget\\packages\\",
-        "outputPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Infrastructure\\obj\\",
+        "outputPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -206,8 +206,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj": {
-                "projectPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj"
+              "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj": {
+                "projectPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj"
               }
             }
           }
@@ -285,14 +285,14 @@
         }
       }
     },
-    "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.User.Management\\Library.User.Management.csproj": {
+    "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.User.Management\\Library.User.Management.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.User.Management\\Library.User.Management.csproj",
+        "projectUniqueName": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.User.Management\\Library.User.Management.csproj",
         "projectName": "Library.User.Management",
-        "projectPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.User.Management\\Library.User.Management.csproj",
+        "projectPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.User.Management\\Library.User.Management.csproj",
         "packagesPath": "C:\\Users\\smart\\.nuget\\packages\\",
-        "outputPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.User.Management\\obj\\",
+        "outputPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.User.Management\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -5490,11 +5490,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj",
+      "projectUniqueName": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Infrastructure\\Library.Infrastructure.csproj",
       "projectName": "Library.Infrastructure",
-      "projectPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj",
+      "projectPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Infrastructure\\Library.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\smart\\.nuget\\packages\\",
-      "outputPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Infrastructure\\obj\\",
+      "outputPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5515,8 +5515,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj": {
-              "projectPath": "E:\\newShimaa\\WebAPI\\Project\\Library\\Library.Core\\Library.Core.csproj"
+            "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj": {
+              "projectPath": "E:\\newShimaa\\WebAPI\\Library\\Shelfie-API\\Library.Core\\Library.Core.csproj"
             }
           }
         }
